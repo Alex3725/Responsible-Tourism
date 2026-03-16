@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Bora Bora - Scroll Page</title>
+    <link rel="stylesheet" href="assets/tailwind.css?v=20260316-4" />
+  </head>
+  <body class="page-shell bg-sand-50 text-ocean-900 font-body dark:bg-ocean-950 dark:text-sand-50 theme-fade">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-3 focus:py-2">Skip to content</a>
+
+    <header class="sticky top-0 z-50 px-4 pt-4 md:px-6">
+      <div class="glass-nav theme-fade mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 rounded-full border border-white/60 px-5 py-3 shadow-float dark:border-ocean-800/70">
+        <a href="index.html" class="text-lg font-display tracking-[0.22em] text-ocean-900 dark:text-sand-50">HOTEL BORA BORA</a>
+        <nav id="scroll-nav" class="hidden md:flex items-center gap-1 rounded-full bg-white/70 p-1 text-[11px] uppercase tracking-[0.28em] text-ocean-700 dark:bg-ocean-900/70 dark:text-sand-100">
+          <a href="#rooms" class="nav-pill bg-ocean-900 text-white dark:bg-lagoon-300 dark:text-ocean-950">Camere</a>
+          <a href="#dining" class="nav-pill hover:bg-white dark:hover:bg-ocean-800">Dining</a>
+          <a href="#activities" class="nav-pill hover:bg-white dark:hover:bg-ocean-800">Attivita</a>
+          <a href="#contact" class="nav-pill hover:bg-white dark:hover:bg-ocean-800">Contatti</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button type="button" class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-ocean-700 shadow-card dark:border-ocean-700 dark:bg-ocean-900/70 dark:text-sand-100 md:hidden" data-nav-toggle aria-controls="scroll-nav" aria-expanded="false">
+            Menu
+          </button>
+          <button
+            type="button"
+            class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-ocean-700 shadow-card dark:border-ocean-700 dark:bg-ocean-900/70 dark:text-sand-100"
+            data-theme-toggle
+            aria-pressed="false"
+          >
+            Tema scuro
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="relative overflow-hidden px-6 pb-8 pt-6 md:pt-10">
+        <div class="hero-wash absolute inset-x-4 top-0 h-128 rounded-4xl md:inset-x-6"></div>
+        <div class="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.08fr,0.92fr] lg:items-center">
+          <div class="pt-10 lg:pt-14">
+            <p class="editorial-kicker">Experience page</p>
+            <h1 class="mt-6 max-w-3xl font-display text-5xl leading-[0.94] md:text-6xl">Una scroll page che vende atmosfera, non solo informazioni.</h1>
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-ocean-700 dark:text-sand-100/78">
+              Qui il soggiorno diventa navigabile: scegli la camera, osserva come cambiano prezzi e servizi, attraversa il viaggio come se fosse una narrazione continua.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.25em] shadow-card dark:bg-ocean-900/70">Camere dinamiche</span>
+              <span class="rounded-full bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.25em] shadow-card dark:bg-ocean-900/70">Dining su misura</span>
+              <span class="rounded-full bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.25em] shadow-card dark:bg-ocean-900/70">Attivita premium</span>
+            </div>
+          </div>
+          <div class="island-card theme-fade overflow-hidden p-4 md:p-6">
+            <div class="placeholder-atoll h-72 rounded-[1.6rem]" role="img" aria-label="Atollo visto dall'alto"></div>
+            <div class="mt-6 grid gap-4 md:grid-cols-[1fr,auto] md:items-end">
+              <div>
+                <p class="metric-label">Journey edit</p>
+                <p class="mt-3 text-2xl font-semibold">Suite, dining e attivita leggono come un unico sistema.</p>
+                <p class="mt-2 text-sm leading-7 text-ocean-700 dark:text-sand-100/72">Il layout ora separa chiaramente i blocchi ma li tiene dentro una stessa atmosfera visiva.</p>
+              </div>
+              <div class="price-badge">7 giorni curati</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rooms" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-ocean-500 dark:text-lagoon-200">Camere</p>
+            <h2 class="mt-3 font-display text-3xl">Scegli la camera ideale</h2>
+            <p class="mt-3 text-sm text-ocean-600 dark:text-sand-200/70">
+              La camera selezionata aggiorna i prezzi di ristorazione e attivita.
+            </p>
+          </div>
+          <div class="tide-card theme-fade rounded-2xl bg-white px-4 py-3 text-sm shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <span class="text-ocean-500 dark:text-lagoon-200">Camera selezionata</span>
+            <span class="ml-2 font-semibold" data-selected-room aria-live="polite">Suite Laguna</span>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <button type="button" class="room-card tide-card group rounded-3xl bg-white p-0 text-left shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800" data-room-id="lagoon-suite" aria-pressed="false">
+            <div class="card-inner">
+              <div class="card-face card-front rounded-3xl bg-white p-6 dark:bg-ocean-900/80">
+                <div class="placeholder-lagoon h-40 rounded-2xl" role="img" aria-label="Suite con vista laguna"></div>
+                <h3 class="mt-4 text-xl font-semibold">Suite Laguna</h3>
+                <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Accesso diretto alla laguna e terrazza privata.</p>
+                <p class="mt-4 text-lg font-semibold">da 1.200 EUR / notte</p>
+                <span class="mt-4 inline-flex text-xs uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Ruota per dettagli</span>
+              </div>
+              <div class="card-face card-back rounded-3xl bg-ocean-800 p-6 text-white">
+                <h4 class="text-lg font-semibold">Dettagli Suite Laguna</h4>
+                <ul class="mt-3 space-y-2 text-sm text-white/80">
+                  <li>Terrazza privata sull'acqua</li>
+                  <li>Colazione in bungalow</li>
+                  <li>Servizio concierge dedicato</li>
+                </ul>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="room-card tide-card group rounded-3xl bg-white p-0 text-left shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800" data-room-id="overwater-bungalow" aria-pressed="false">
+            <div class="card-inner">
+              <div class="card-face card-front rounded-3xl bg-white p-6 dark:bg-ocean-900/80">
+                <div class="placeholder-atoll h-40 rounded-2xl" role="img" aria-label="Bungalow sull'acqua"></div>
+                <h3 class="mt-4 text-xl font-semibold">Bungalow Overwater</h3>
+                <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Lusso assoluto con scala privata in laguna.</p>
+                <p class="mt-4 text-lg font-semibold">da 1.800 EUR / notte</p>
+                <span class="mt-4 inline-flex text-xs uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Ruota per dettagli</span>
+              </div>
+              <div class="card-face card-back rounded-3xl bg-ocean-800 p-6 text-white">
+                <h4 class="text-lg font-semibold">Dettagli Bungalow</h4>
+                <ul class="mt-3 space-y-2 text-sm text-white/80">
+                  <li>Terrazza panoramica</li>
+                  <li>Accesso diretto al mare</li>
+                  <li>Check-in premium</li>
+                </ul>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="room-card tide-card group rounded-3xl bg-white p-0 text-left shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800" data-room-id="garden-villa" aria-pressed="false">
+            <div class="card-inner">
+              <div class="card-face card-front rounded-3xl bg-white p-6 dark:bg-ocean-900/80">
+                <div class="placeholder-map h-40 rounded-2xl" role="img" aria-label="Villa con giardino"></div>
+                <h3 class="mt-4 text-xl font-semibold">Villa Giardino</h3>
+                <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Privacy e verde, a pochi passi dalla spiaggia.</p>
+                <p class="mt-4 text-lg font-semibold">da 900 EUR / notte</p>
+                <span class="mt-4 inline-flex text-xs uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Ruota per dettagli</span>
+              </div>
+              <div class="card-face card-back rounded-3xl bg-ocean-800 p-6 text-white">
+                <h4 class="text-lg font-semibold">Dettagli Villa</h4>
+                <ul class="mt-3 space-y-2 text-sm text-white/80">
+                  <li>Giardino privato</li>
+                  <li>Area lounge ombreggiata</li>
+                  <li>Accesso rapido ai servizi</li>
+                </ul>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section id="dining" class="bg-white dark:bg-ocean-950/80">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.35em] text-ocean-500 dark:text-lagoon-200">Ristorazione</p>
+              <h2 class="mt-3 font-display text-3xl">Sapori polinesiani e cene sull'acqua</h2>
+              <p class="mt-3 text-sm text-ocean-600 dark:text-sand-200/70">
+                Colazioni in bungalow, picnic su motu e cene romantiche al tramonto.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-sand-50 px-4 py-3 text-sm dark:bg-ocean-900/60">
+              <span class="text-ocean-500 dark:text-lagoon-200">Prezzi indicativi basati sulla camera selezionata</span>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="tide-card rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-ocean-800 dark:bg-ocean-900/60">
+              <h3 class="text-lg font-semibold">Colazione in bungalow</h3>
+              <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Servizio privato con vista laguna.</p>
+              <p class="mt-4 text-xl font-semibold" data-food-id="lagoon-breakfast">--</p>
+            </article>
+            <article class="tide-card rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-ocean-800 dark:bg-ocean-900/60">
+              <h3 class="text-lg font-semibold">Cena romantica sull'acqua</h3>
+              <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Menu degustazione con champagne.</p>
+              <p class="mt-4 text-xl font-semibold" data-food-id="sunset-dinner">--</p>
+            </article>
+            <article class="tide-card rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-ocean-800 dark:bg-ocean-900/60">
+              <h3 class="text-lg font-semibold">Chef table deluxe</h3>
+              <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Esperienza culinaria esclusiva.</p>
+              <p class="mt-4 text-xl font-semibold" data-food-id="chef-table">--</p>
+            </article>
+            <article class="tide-card rounded-2xl border border-sand-200 bg-sand-50 p-6 dark:border-ocean-800 dark:bg-ocean-900/60">
+              <h3 class="text-lg font-semibold">Picnic su motu</h3>
+              <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Pranzo privato su isolotto tropicale.</p>
+              <p class="mt-4 text-xl font-semibold" data-food-id="lagoon-picnic">--</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-ocean-500 dark:text-lagoon-200">Attivita</p>
+            <h2 class="mt-3 font-display text-3xl">Avventura e relax in laguna</h2>
+            <p class="mt-3 text-sm text-ocean-600 dark:text-sand-200/70">
+              Snorkeling con razze, tour dell'isola, immersioni e spa di lusso.
+            </p>
+          </div>
+          <div class="tide-card theme-fade rounded-2xl bg-white px-4 py-3 text-sm shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <span class="text-ocean-500 dark:text-lagoon-200">Prezzi indicativi basati sulla camera selezionata</span>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <article class="tide-card rounded-2xl bg-white p-6 shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <h3 class="text-lg font-semibold">Escursione in laguna</h3>
+            <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Snorkeling con razze e piccoli squali.</p>
+            <p class="mt-4 text-xl font-semibold" data-activity-id="lagoon-cruise">--</p>
+          </article>
+          <article class="tide-card rounded-2xl bg-white p-6 shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <h3 class="text-lg font-semibold">Tour isola principale</h3>
+            <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">4x4, mercato locale e punti panoramici.</p>
+            <p class="mt-4 text-xl font-semibold" data-activity-id="island-tour">--</p>
+          </article>
+          <article class="tide-card rounded-2xl bg-white p-6 shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <h3 class="text-lg font-semibold">Immersioni e mare</h3>
+            <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Nuoto con pesci tropicali e tartarughe.</p>
+            <p class="mt-4 text-xl font-semibold" data-activity-id="diving-experience">--</p>
+          </article>
+          <article class="tide-card rounded-2xl bg-white p-6 shadow-card dark:bg-ocean-900/70 dark:border dark:border-ocean-800">
+            <h3 class="text-lg font-semibold">Spa polinesiana</h3>
+            <p class="mt-2 text-sm text-ocean-600 dark:text-sand-200/70">Massaggio tradizionale e relax.</p>
+            <p class="mt-4 text-xl font-semibold" data-activity-id="spa-ritual">--</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="bg-ocean-800 text-white dark:bg-ocean-900">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+            <div>
+              <p class="text-xs uppercase tracking-[0.35em] text-sand-200">Servizi</p>
+              <h2 class="mt-3 font-display text-3xl">Servizi esclusivi e comfort</h2>
+              <p class="mt-3 text-sm text-white/70">
+                Ogni momento e seguito dal nostro team: trasferimenti, concierge e supporto 24/7.
+              </p>
+              <div class="mt-6 grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-white/10 p-4">Spa e massaggi polinesiani</div>
+                <div class="rounded-2xl bg-white/10 p-4">Trasferimento in barca privata</div>
+                <div class="rounded-2xl bg-white/10 p-4">Concierge per escursioni</div>
+                <div class="rounded-2xl bg-white/10 p-4">Assistenza continua in resort</div>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-white/20 p-6 dark:border-ocean-700">
+              <h3 class="text-sm uppercase tracking-[0.3em] text-sand-200">Itinerario 7 giorni</h3>
+              <ol class="mt-4 space-y-3 text-sm text-white/80">
+                <li>Giorno 1: volo dall'Italia, arrivo e check-in in bungalow</li>
+                <li>Giorno 2: relax in laguna, kayak e snorkeling</li>
+                <li>Giorno 3: escursione laguna con picnic su motu</li>
+                <li>Giorno 4: tour dell'isola principale e Mount Otemanu</li>
+                <li>Giorno 5: immersioni, jet ski e crociera al tramonto</li>
+                <li>Giorno 6: volo panoramico in elicottero e spa</li>
+                <li>Giorno 7: ultimo bagno, shopping e rientro</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-16">
+        <div class="grid gap-8 lg:grid-cols-[0.9fr,1.1fr]">
+          <div class="tide-card rounded-3xl border border-sand-200 bg-white p-6 shadow-card dark:border-ocean-800 dark:bg-ocean-900/70">
+            <h3 class="text-sm uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Budget indicativo (7 giorni)</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ocean-600 dark:text-sand-200/70">
+              <li>Voli: 1500-2500 EUR</li>
+              <li>Hotel luxury: 6000-10000 EUR</li>
+              <li>Attivita: 300-800 EUR</li>
+              <li>Cibo: 400-700 EUR</li>
+            </ul>
+          </div>
+          <div class="tide-card rounded-3xl bg-sand-50 p-6 dark:bg-ocean-900/60">
+            <h3 class="text-sm uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Periodo ideale</h3>
+            <p class="mt-3 text-sm text-ocean-600 dark:text-sand-200/70">
+              Maggio-ottobre, clima secco e soleggiato con temperature intorno ai 28 C.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white px-4 py-2 text-xs uppercase tracking-[0.25em] dark:bg-ocean-900/80">Mare e snorkeling</span>
+              <span class="rounded-full bg-white px-4 py-2 text-xs uppercase tracking-[0.25em] dark:bg-ocean-900/80">Laguna turchese</span>
+              <span class="rounded-full bg-white px-4 py-2 text-xs uppercase tracking-[0.25em] dark:bg-ocean-900/80">Stagione secca</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-white dark:bg-ocean-950/80">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <div class="grid gap-10 lg:grid-cols-[1.2fr,0.8fr]">
+            <div>
+              <p class="text-xs uppercase tracking-[0.35em] text-ocean-500 dark:text-lagoon-200">Contatti</p>
+              <h2 class="mt-3 font-display text-3xl">Parliamo del tuo viaggio</h2>
+              <p class="mt-3 text-sm text-ocean-600 dark:text-sand-200/70">
+                Inviaci le tue preferenze e prepareremo un piano personalizzato.
+              </p>
+              <form class="form-shell mt-6 grid gap-4 rounded-[1.6rem] p-5" aria-label="Modulo contatti">
+                <label class="text-xs uppercase tracking-[0.25em] text-ocean-500 dark:text-lagoon-200">
+                  Nome e cognome
+                  <input type="text" class="mt-2 w-full rounded-2xl border border-sand-200 bg-white px-4 py-3 dark:border-ocean-800 dark:bg-ocean-900/70" placeholder="Inserisci il nome" />
+                </label>
+                <label class="text-xs uppercase tracking-[0.25em] text-ocean-500 dark:text-lagoon-200">
+                  Email
+                  <input type="email" class="mt-2 w-full rounded-2xl border border-sand-200 bg-white px-4 py-3 dark:border-ocean-800 dark:bg-ocean-900/70" placeholder="nome@email.com" />
+                </label>
+                <label class="text-xs uppercase tracking-[0.25em] text-ocean-500 dark:text-lagoon-200">
+                  Messaggio
+                  <textarea class="mt-2 w-full rounded-2xl border border-sand-200 bg-white px-4 py-3 dark:border-ocean-800 dark:bg-ocean-900/70" rows="4" placeholder="Preferenze, date, richieste speciali"></textarea>
+                </label>
+                <button type="button" class="rounded-full bg-ocean-600 px-6 py-3 text-white">Invia richiesta</button>
+              </form>
+            </div>
+            <div class="tide-card rounded-3xl border border-sand-200 bg-sand-50 p-6 dark:border-ocean-800 dark:bg-ocean-900/60">
+              <h3 class="text-sm uppercase tracking-[0.3em] text-ocean-500 dark:text-lagoon-200">Dettagli</h3>
+              <ul class="mt-4 space-y-3 text-sm text-ocean-600 dark:text-sand-200/70">
+                <li>Assistenza dedicata per viaggi a Bora Bora</li>
+                <li>Risposta entro 24 ore lavorative</li>
+                <li>Consulenza su voli e trasferimenti</li>
+              </ul>
+              <div class="placeholder-map mt-6 h-40 rounded-2xl" role="img" aria-label="Mappa resort"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-6 pb-10 pt-4">
+      <div class="section-shell theme-fade mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6 text-sm text-ocean-600 md:flex-row md:items-center md:justify-between dark:text-sand-200/70">
+        <p>Hotel Bora Bora</p>
+        <p>Pagina experience con card piu scenografiche e gerarchia piu netta.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/data/rooms.js"></script>
+    <script type="module" src="assets/data/food.js"></script>
+    <script type="module" src="assets/data/activities.js"></script>
+    <script type="module" src="assets/data/itinerary.js"></script>
+    <script type="module" src="assets/data/budget.js"></script>
+    <script type="module" src="assets/scripts/scrollpage.js"></script>
+  </body>
+</html>

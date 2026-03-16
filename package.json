@@ -1,0 +1,18 @@
+{
+  "name": "responsible-tourism-hotel-structure",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build:css": "tailwindcss -i src/styles/tailwind.css -o public/assets/tailwind.css",
+    "build:ts": "tsc -p tsconfig.json",
+    "build": "tailwindcss -i src/styles/tailwind.css -o public/assets/tailwind.css && tsc -p tsconfig.json",
+    "start": "pnpm run build && npx http-server public -p 5173 -c-1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "4.2.1",
+    "typescript": "latest"
+  }
+}

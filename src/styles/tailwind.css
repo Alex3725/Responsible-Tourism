@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Source Sans 3", sans-serif;
+
+  --color-ocean-50: #eefbff;
+  --color-ocean-100: #d8f0fa;
+  --color-ocean-200: #bfe3f8;
+  --color-ocean-400: #4ea4c8;
+  --color-ocean-500: #2a8fae;
+  --color-ocean-600: #1c6e8c;
+  --color-ocean-700: #175e78;
+  --color-ocean-800: #0e3a4d;
+  --color-ocean-900: #0a2d3d;
+  --color-ocean-950: #071a24;
+
+  --color-lagoon-100: #daf8f3;
+  --color-lagoon-200: #a8efe4;
+  --color-lagoon-300: #63dbca;
+  --color-lagoon-400: #29b8ae;
+
+  --color-sand-50: #fff7e6;
+  --color-sand-100: #fdeed2;
+  --color-sand-200: #f3d9b1;
+  --color-sand-400: #e0b36b;
+  --color-sand-600: #b1782f;
+  --color-sand-800: #6f4a1a;
+
+  --color-coral-300: #ffb8a1;
+  --color-coral-400: #ff8a6b;
+  --color-coral-500: #ef6a48;
+
+  --shadow-card: 0 24px 60px -34px rgba(9, 36, 44, 0.35);
+  --shadow-float: 0 30px 80px -38px rgba(13, 43, 58, 0.42);
+  --shadow-glow: 0 18px 40px -24px rgba(41, 184, 174, 0.55);
+}
+
+@import "./components.css";
