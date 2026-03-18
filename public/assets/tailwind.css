@@ -1248,23 +1248,49 @@
   .nav-pill {
     border-radius: 9999px;
     padding: 0.8rem 1rem;
-    transition: background-color 220ms ease, color 220ms ease, transform 220ms ease;
+    transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
   }
   .nav-pill:hover {
+    background: rgba(41, 184, 174, 0.2);
+    color: #0a2d3d;
     transform: translateY(-1px);
+    box-shadow: 0 12px 28px -20px rgba(41, 184, 174, 0.95);
+  }
+  .dark .nav-pill:hover {
+    color: #f4fbff;
+  }
+  .nav-pill:focus-visible, [data-theme-toggle]:focus-visible, [data-nav-toggle]:focus-visible, a[href].rounded-full:focus-visible, button.rounded-full:focus-visible {
+    outline: 2px solid rgba(41, 184, 174, 0.8);
+    outline-offset: 2px;
+  }
+  [data-theme-toggle], [data-nav-toggle], a[href].rounded-full, button.rounded-full {
+    transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+  [data-theme-toggle]:hover, [data-nav-toggle]:hover, a[href].rounded-full:hover, button.rounded-full:hover {
+    background: linear-gradient(120deg, rgba(99, 219, 202, 0.95), rgba(168, 239, 228, 0.95));
+    color: #062130;
+    border-color: rgba(41, 184, 174, 0.75);
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px -24px rgba(41, 184, 174, 0.95);
+  }
+  .dark [data-theme-toggle]:hover, .dark [data-nav-toggle]:hover, .dark a[href].rounded-full:hover, .dark button.rounded-full:hover {
+    background: linear-gradient(120deg, rgba(99, 219, 202, 0.94), rgba(41, 184, 174, 0.92));
+    color: #f4fbff;
+    border-color: rgba(168, 239, 228, 0.68);
   }
   .room-card {
-    perspective: 1200px;
-    transition: transform 250ms ease, box-shadow 250ms ease;
+    position: relative;
+    overflow: hidden;
+    transition: transform 320ms ease, box-shadow 320ms ease;
   }
   .room-card .card-inner {
-    min-height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 600ms ease;
+    display: grid;
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .room-card .card-face {
+    grid-area: 1 / 1;
     min-height: 100%;
-    backface-visibility: hidden;
+    transition: opacity 360ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .room-card .card-front, .room-card .card-back {
     display: flex;
@@ -1272,11 +1298,24 @@
     justify-content: space-between;
     gap: 1rem;
   }
-  .room-card.is-flipped .card-inner {
-    transform: rotateY(180deg);
-  }
   .card-back {
-    transform: rotateY(180deg);
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    pointer-events: none;
+  }
+  .room-card.is-flipped .card-front {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.985);
+    pointer-events: none;
+  }
+  .room-card.is-flipped .card-back {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  .room-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 70px -42px rgba(41, 184, 174, 0.62);
   }
   .room-card.is-selected {
     outline: 2px solid rgba(41, 184, 174, 0.88);
@@ -1326,6 +1365,9 @@
   }
   .room-card .card-inner {
     transition-duration: 1ms;
+  }
+  .room-card:hover {
+    transform: none;
   }
 }
 @property --tw-space-y-reverse {
