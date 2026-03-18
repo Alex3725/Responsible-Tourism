@@ -9,16 +9,20 @@ const languageToggle = document.querySelector("[data-lang-toggle]");
 const THEME_KEY = "bora-theme";
 const LANGUAGE_KEY = "bora-language";
 const IT_TO_EN = {
-    "Hotel Bora Bora - Scroll Page": "Hotel Bora Bora - Experience Page",
+    "Hotel Bora Bora - Pagina scroll": "Hotel Bora Bora - Scroll Page",
+    "La tua esperienza su misura": "Your tailored experience",
     "Una scroll page che vende atmosfera, non solo informazioni.": "A scroll page that sells atmosphere, not just information.",
+    "Qui il soggiorno diventa navigabile: scegli la camera, osserva come cambiano prezzi e servizi e prepara al meglio la tua vacnaza da sogno.": "Here the stay becomes navigable: choose the room, watch prices and services change, and best prepare your dream vacation.",
     "Qui il soggiorno diventa navigabile: scegli la camera, osserva come cambiano prezzi e servizi, attraversa il viaggio come se fosse una narrazione continua.": "Here the stay becomes navigable: pick your room, watch prices and services adapt, and move through the trip like a continuous story.",
     "Camere dinamiche": "Dynamic rooms",
     "Dining su misura": "Tailored dining",
     "Attivita premium": "Premium activities",
-    "Journey edit": "Journey edit",
+    "Pagina experience": "Experience page",
+    "Racconto del viaggio": "Journey edit",
     "Suite, dining e attivita leggono come un unico sistema.": "Suites, dining, and activities read as one connected system.",
     "Il layout ora separa chiaramente i blocchi ma li tiene dentro una stessa atmosfera visiva.": "The layout now separates sections clearly while keeping one visual atmosphere.",
     "7 giorni curati": "7 curated days",
+    "Atollo visto dall'alto": "Atoll seen from above",
     Camere: "Rooms",
     "Scegli la camera ideale": "Choose your ideal room",
     "La camera selezionata aggiorna i prezzi di ristorazione e attivita.": "The selected room updates dining and activity prices.",
@@ -45,6 +49,9 @@ const IT_TO_EN = {
     "Giardino privato": "Private garden",
     "Area lounge ombreggiata": "Shaded lounge area",
     "Accesso rapido ai servizi": "Quick access to services",
+    "Suite con vista laguna": "Lagoon view suite",
+    "Bungalow sull'acqua": "Overwater bungalow",
+    "Villa con giardino": "Garden villa",
     Ristorazione: "Dining",
     "Sapori polinesiani e cene sull'acqua": "Polynesian flavors and overwater dinners",
     "Colazioni in bungalow, picnic su motu e cene romantiche al tramonto.": "Bungalow breakfasts, motu picnics, and romantic sunset dinners.",
@@ -74,6 +81,7 @@ const IT_TO_EN = {
     "Trasferimento in barca privata": "Private boat transfer",
     "Concierge per escursioni": "Excursion concierge",
     "Assistenza continua in resort": "Continuous resort assistance",
+    "Modulo contatti": "Contact form",
     "Itinerario 7 giorni": "7-day itinerary",
     "Giorno 1: volo dall'Italia, arrivo e check-in in bungalow": "Day 1: flight from Italy, arrival and bungalow check-in",
     "Giorno 2: relax in laguna, kayak e snorkeling": "Day 2: lagoon relaxation, kayak and snorkeling",
@@ -103,6 +111,7 @@ const IT_TO_EN = {
     "Assistenza dedicata per viaggi a Bora Bora": "Dedicated support for Bora Bora travel",
     "Risposta entro 24 ore lavorative": "Response within 24 business hours",
     "Consulenza su voli e trasferimenti": "Consulting on flights and transfers",
+    "Mappa resort": "Resort map",
     "Hotel Bora Bora": "Hotel Bora Bora",
     "Pagina experience con card piu scenografiche e gerarchia piu netta.": "Experience page with more scenic cards and clearer hierarchy.",
     "Inserisci il nome": "Enter your name",
@@ -124,7 +133,10 @@ const updateLanguageToggleLabel = () => {
     languageToggle.textContent = currentLanguage === "en" ? "Italiano" : "English";
     languageToggle.setAttribute("aria-pressed", String(currentLanguage === "it"));
 };
+const normalizeText = (value) => value.replace(/\s+/g, " ").trim();
+const buildNormalizedMap = (map) => Object.fromEntries(Object.entries(map).map(([key, value]) => [normalizeText(key), value]));
 const replaceMappedText = (map) => {
+    const normalizedMap = buildNormalizedMap(map);
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     const textNodes = [];
     while (walker.nextNode()) {
@@ -133,11 +145,11 @@ const replaceMappedText = (map) => {
     textNodes.forEach((node) => {
         var _a, _b, _c, _d, _e;
         const original = (_a = node.nodeValue) !== null && _a !== void 0 ? _a : "";
-        const trimmed = original.trim();
-        if (!trimmed) {
+        const normalized = normalizeText(original);
+        if (!normalized) {
             return;
         }
-        const translated = map[trimmed];
+        const translated = normalizedMap[normalized];
         if (!translated) {
             return;
         }
